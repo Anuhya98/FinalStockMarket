@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Home</title>
+    
+</head>
+<body>
+  <div class="container-fluid">
+    <h1 class="responsive" style="text-align:center ; color:thistle;"><b>STOCK TRADERS</b></h1>
+    <div class="row">
+      <div class="col">
+    <div class="topleft">
+    <img src="https://image.shutterstock.com/image-vector/fun-people-healthy-life-logo-260nw-560428081.jpg" class="img-responsive" width="100px" height="100px">
+    </div>
+    </div>
+    </div>
+  </div>
+  <br>
+<!-- <form [FormGroup]="app"> -->
+  <div class="center">
+    <h2 style="font-family:Arial ; color:white; ">Welcome to the family of STOCK TRADERS</h2>
+    <br>
+    <div action="/action_page.php" >
+       <!-- <div class="navbar">
+        <a routerLink="/home"><i class='fa fa-home' style='font-size:20px'></i>&nbsp;Home</a>
+        <a routerLink="register"><i class='fas fa-user-plus' style='font-size:20px'></i>&nbsp;Register</a>
+        <a routerLink="login">Login</a>
+        <a routerLink="adminlanding">Admin Landing</a>
+        <a routerLink="userlanding"><i class='fa fa-user' style='font-size:20px'></i>&nbsp;User Landing</a>
+        <a routerLink="/iposlist">IPOS List</a>
+        <a routerLink="users"><i class='fas fa-user-friends' style='font-size:20px'></i>&nbsp;UserList</a>
+      </div>  -->
+
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav mr-auto mx-auto">
+          <li class="nav-item">
+            <a routerLink=""><i class='fa fa-home' style='font-size:20px'></i>&nbsp;Home</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/register"><i class='fas fa-user-plus' style='font-size:20px'></i>&nbsp;Register</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="login"><i class="fa fa-sign-in-alt" style="font-size: 20px;"></i>&nbsp;Login</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="adminlanding"><i class="fas fa-user-tie" style="font-size: 20px;"></i>&nbsp;Admin Landing</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="userlanding"><i class='fa fa-user' style='font-size:20px'></i>&nbsp;User Landing</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/iposlist">IPOS List</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="users"><i class='fas fa-user-friends' style='font-size:20px'></i>&nbsp;UserList</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/displaycompanies"><i class='fas fa-city' style='font-size:20px'></i>&nbsp;CompaniesList</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="displaystockexchanges"><i class='fas fa-chart-area' style='font-size:20px'></i>&nbsp;Stock ExchangesList</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="displaycharts"><i class='fas fa-chart-area' style='font-size:20px'></i>&nbsp;Charts</a>
+          </li>
+        </ul>
+      </div>
+      </nav>
+     
+    </div>
+    </div>
+<!-- </form> -->
+<router-outlet></router-outlet>
+</body>
+<!-- Footer -->
+<div id="footer" class="footer" style="color: white;font-size: medium; text-align: center;">
+ 
+  Dont worry .All rights are reserved
+  </div>
+

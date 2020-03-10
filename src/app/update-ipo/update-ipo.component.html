@@ -1,0 +1,40 @@
+<h3 style="font-size: medium;color: aliceblue; text-align: center">Update IPO </h3>
+<div class="container" style="margin-bottom:0">
+    <form [formGroup]="updateipoForm">
+        <div class="form-group" style="color: white;">
+            <label for="id">Company Id</label>
+            <input type="number" formControlName="id" placeholder="enter company id" name="id" class="form-control" id="id" required>
+          </div>
+        <div class="form-group" style="color: white;">
+          <label for="name">Name of the company</label>
+          <input type="text" formControlName="companyname" placeholder="enter company name" name="companyname" class="form-control" id="companyname" required>
+        </div>
+        <div class="form-group">
+        <div class="custom-control">
+
+                <p style="color: white;font-weight: bold">Select the stock exchange</p>
+                <select name="cars" class="form-control" formControlName="stockexchange" required>
+                   <!-- <option selected>Stock Exchange</option> -->
+                   <option value="nse">NSE</option>
+                   <option value="bse">BSE</option>
+                   <option value="others">Others</option>
+                 </select>
+        </div>
+        </div>
+                 <br>
+        <div class="form-group" style="color: white;">
+                <label for="name">Price per share</label>
+                <input type="number" formControlName="pricepershare" placeholder="enter price per share" name="pricepershare" class="form-control" id="pricepershare" required>
+              </div>
+              <div class="form-group" style="color: white;">
+                <label for="name">Total no of shares</label>
+                <input type="number" formControlName="totalnoofshares" placeholder="enter total no of shares" name="totalnoofshares" class="form-control" id="totalnoofshares" required>
+              </div>
+              <div class="form-group" style="color: white;">
+                <label for="name">Date and Time</label>
+                <input type="datetime-local" formControlName="opendatetime" placeholder="enter Date and Time" name="opendatetime" class="form-control" id="opendatetime" required>
+              </div>
+              <button class="btn btn-success" (click)="updateTheIPO()" [disabled]="!updateipoForm.valid">Update ipo</button>
+
+    </form> 
+   </div>

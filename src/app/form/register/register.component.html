@@ -1,0 +1,33 @@
+<h2 style="font-size: medium;color: aliceblue; text-align: center">User Registration Page</h2>
+    <div class="container" style="margin-bottom:0">
+        <form [formGroup]="registerForm" novalidate class="form"  (ngSubmit)="addUser()">
+            <div class="form-group" style="color: white;">
+          
+              <label for="username">Name</label>
+              <input type="text" formControlName="username" placeholder="enter name" name="username" class="form-control" id="username" required>
+            </div>
+            <div class="form-group" style="color: white;">
+              <label for="id">Id</label>
+              <input type="number" formControlName="id" placeholder="enter id" name="id" class="form-control" id="id" required>
+            </div>
+             
+         
+            <div class="form-group" style="color: white;">
+              <label for="email">Email</label>
+              <input type="email" email="true" formControlName="email" placeholder="email" name="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group" style="color: white;">
+              <label for="phoneno">Phone number</label>
+              <input type="number" formControlName="phoneno" placeholder="enter number" name="phoneno" class="form-control" id="phoneno" required>
+            </div>
+            <div class="form-group" style="color: white;">
+              <label for="password">Password</label>
+              <input type="password" formControlName="password" placeholder="password" name="password" class="form-control" id="password" required>
+            </div>
+            <div class="form-group" style="color: white;">
+              <label for="confirmpassword">Confirm password</label>
+              <input type="password" formControlName="confirmpassword" placeholder="confirmpassword" name="confirmpassword" class="form-control" id="confirmpassword" required>
+            </div>  
+            <button type="submit" class="btn btn-success" [disabled]="!registerForm.valid">Submit</button>
+        </form> 
+       </div>

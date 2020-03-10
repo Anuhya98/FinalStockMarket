@@ -1,0 +1,23 @@
+<div class="table-responsive">
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <!-- <th>Password</th>
+        <th>Confirm Password</th> -->
+        <th>Actions</th>
+    </tr>
+    <tr *ngFor="let user of users">
+        <td>{{user.id}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.phoneno}}</td>
+        <!-- <td>{{user.password}}</td>
+        <td>{{user.confirmpassword}}</td> -->
+        <td><button class="btn btn-danger" (click)="deleteTheUser(user)"><i class='fas fa-user-times' style='font-size:20px'></i></button>&nbsp;
+        <button class="btn btn-success" (click)="updateUser(user)"><i class='fas fa-user-edit' style='font-size:20px'></i></button></td>
+    </tr>
+</table>
+</div>

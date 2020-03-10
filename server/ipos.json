@@ -1,0 +1,32 @@
+{
+  "ipos": [
+    {
+      "id": 1101,
+      "companyname": "reliance",
+      "stockexchange": "nse",
+      "pricepershare": 2000,
+      "totalnoofshares": 30
+    },
+    {
+      "id": 1102,
+      "companyname": "walmart",
+      "stockexchange": "bse",
+      "pricepershare": 3000,
+      "totalnoofshares": 40
+    },
+    {
+      "id": 1103,
+      "companyname": "reddyslabs",
+      "stockexchange": "nse",
+      "pricepershare": 1500,
+      "totalnoofshares": 25
+    },
+    {
+      "id": 1104,
+      "companyname": "adani",
+      "stockexchange": "bse",
+      "pricepershare": 3500,
+      "totalnoofshares": 30
+    }
+  ]
+}

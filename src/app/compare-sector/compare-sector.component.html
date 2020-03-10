@@ -1,0 +1,19 @@
+<div class="container" style="margin-bottom:0">
+    <form [formGroup]="comparesectorForm" novalidate class="form"  (ngSubmit)="submit()">
+
+<div class="form-group" style="color: white;">
+    <label for="id">Company Id</label>
+    <input type="number" formControlName="companyid" placeholder="enter companyid" name="id" class="form-control" id="companyid">
+  </div>
+  <div class="form-group" style="color: white;">
+    <label for="name">Sector name</label>
+    <input type="text" formControlName="brief" placeholder="enter the brief history" name="brief" class="form-control" id="brief">
+  </div>
+  <div class="form-group" style="color: white;">
+    <label for="name">Brief</label>
+    <input type="text" formControlName="sectorname" placeholder="enter the sector name" name="sectorname" class="form-control" id="sectorname">
+  </div>
+  <button type="submit" class="btn btn-success">Submit</button>
+
+  </form>
+  </div>

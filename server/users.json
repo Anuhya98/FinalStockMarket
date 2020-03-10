@@ -1,0 +1,52 @@
+{
+  "users": [
+    {
+      "id": 101,
+      "username": "Anu",
+      "email": "anu66@gmail.com",
+      "phoneno": 76543,
+      "password": "anu",
+      "confirmpassword": "anu"
+    },
+    {
+      "id": 102,
+      "username": "Sadika",
+      "email": "gsp66@gmail.com",
+      "phoneno": 87426,
+      "password": "sadikha",
+      "confirmpassword": "sadhika"
+    },
+    {
+      "id": 103,
+      "username": "Abdus",
+      "email": "abdus99@gmail.com",
+      "phoneno": 89654,
+      "password": "abdus",
+      "confrmpassword": "abdus"
+    },
+    {
+      "id": 104,
+      "username": "Aneena",
+      "email": "aneena@gmail.com",
+      "phoneno": 79056,
+      "password": "",
+      "confirmpassword": ""
+    },
+    {
+      "id": 123,
+      "username": "sanju",
+      "email": "san@hotmail",
+      "phoneno": 98765,
+      "password": "0123",
+      "confirmpassword": "0123"
+    },
+    {
+      "id": 111,
+      "username": "Harshitha",
+      "email": "harshi@hmail.com",
+      "phoneno": 456777,
+      "password": "123",
+      "confirmpassword": "123"
+    }
+  ]
+}

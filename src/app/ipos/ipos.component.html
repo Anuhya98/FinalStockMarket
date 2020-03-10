@@ -1,0 +1,24 @@
+<h2 style="font-size: medium;color: aliceblue; text-align: center">IPO List Page</h2>
+<div class="table-responsive">
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>CompanyName</th>
+        <th>StockExchange</th>
+        <th>TotalNoOfShares</th>
+        <th>PricePerShare</th>
+        <th>Date And Time</th>
+        <th>Actions</th>
+    </tr>
+    <tr *ngFor="let ipo of ipos">
+        <td>{{ipo.id}}</td>
+        <td>{{ipo.companyname}}</td>
+        <td>{{ipo.stockexchange}}</td>
+        <td>{{ipo.totalnoofshares}}</td>
+        <td>{{ipo.pricepershare}}</td>
+        <td>{{ipo.opendatetime}}</td>
+        <td><button class="btn btn-danger" (click)="deleteIPO(ipo.id)"><i class='fas fa-trash' style='font-size:20px'></i></button>&nbsp;
+        <button class="btn btn-success" (click)="updateIPO(ipo)"><i class='fas fa-edit' style='font-size:20px'></i></button></td>
+    </tr>
+</table>
+</div>

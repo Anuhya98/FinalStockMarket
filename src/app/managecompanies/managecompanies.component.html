@@ -1,0 +1,28 @@
+<div class="table-responsive">
+<table class="table">
+    <tr>
+        <th>Company Id</th>
+        <th>CompanyName</th>
+        <th>Turnover</th>
+        <th>CEO name</th>
+        <th>Board of Directors</th>
+        <th>StockExchange</th>
+        <th>Sector</th>
+        <th>About Company</th>
+        <th>Actions</th>
+    </tr>
+    <tr *ngFor="let company of managecompanies">
+        <td>{{company.id}}</td>
+        <td>{{company.companyname}}</td>
+        <td>{{company.turnover}}
+        <td>{{company.companyceoname}}</td>
+        <td>{{company.boardofdirectors}}</td>
+        <td>{{company.selectstockexchange}}</td>
+        <td>{{company.selectsector}}</td>
+        <td>{{company.aboutcompany}}</td>
+        <td><button class="btn btn-danger" (click)="deleteCompany(company)"><i class='fas fa-trash' style='font-size:20px'></i></button>&nbsp;
+        <button class="btn btn-success" (click)="updateCompany(company)"><i class='fas fa-edit' style='font-size:20px'></i></button></td>
+    </tr>
+</table>
+</div>
+

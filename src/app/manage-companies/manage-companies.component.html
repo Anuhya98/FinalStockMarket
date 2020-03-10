@@ -1,0 +1,56 @@
+<div class="container" style="margin-bottom:0">
+    <form [formGroup]="managecompanyForm" novalidate class="form"  (ngSubmit)="submit()">
+      <div class="form-group" style="color: white;">
+        <label for="id">Company Id</label>
+        <input type="number" formControlName="id" placeholder="enter company id" name="id" class="form-control" id="id" required>
+      </div>
+        <div class="form-group" style="color: white;">
+          <label for="name">Name of the company</label>
+          <input type="text" formControlName="companyname" placeholder="enter company name" name="companyname" class="form-control" id="companyname" required>
+        </div>
+        <div class="form-group" style="color: white;">
+            <label for="id">Turnover</label>
+            <input type="number" formControlName="turnover" placeholder="enter turnover" name="turnover" class="form-control" id="id" required>
+          </div>
+          <div class="form-group" style="color: white;">
+            <label for="name">Name of the company CEO</label>
+            <input type="text" formControlName="companyceoname" placeholder="enter company ceo name" name="companyceoname" class="form-control" id="companyceoname" required>
+          </div>
+          <div class="form-group" style="color: white;">
+            <label for="name">Board of Directors</label>
+            <input type="text" formControlName="boardofdirectors" placeholder="enter the board of directors" name="boardofdirectors" class="form-control" id="boardofdirectors" required>
+          </div>
+        <div class="form-group">
+        <div class="custom-control">
+
+                <p style="color: white;font-weight: bold" >Select the stock exchange</p>
+                <select name="selectstockexchange" class="form-control" formControlName="selectstockexchange" required>
+                   <!-- <option selected>Stock Exchange</option> -->
+                   <option value="nse">NSE</option>
+                   <option value="bse">BSE</option>
+                   <option value="others">Others</option>
+                 </select>
+        </div>
+        </div>
+        <div class="form-group">
+            <div class="custom-control">
+    
+                    <p style="color: white;font-weight: bold" >Select the sector</p>
+                    <select name="selectsector" class="form-control" formControlName="selectsector" required>
+                       <!-- <option selected>Sector</option> -->
+                       <option value="it">IT</option>
+                       <option value="consulting">Consulting</option>
+                       <option value="others">Others</option>
+                     </select>
+            </div>
+            </div>
+            
+                 <br>
+        <div class="form-group" style="color: white;">
+                <label for="name">About the company</label>
+                <input type="text" formControlName="aboutcompany" placeholder="enter about the company" name="aboutcompany" class="form-control" id="aboutcompany" required>
+              </div>
+              <!-- <button type="submit" class="btn btn-success">Submit</button> -->
+              <button type="submit" class="btn btn-success" (click)="addCompany()" [disabled]="!managecompanyForm.valid">Submit</button>
+    </form> 
+   </div>

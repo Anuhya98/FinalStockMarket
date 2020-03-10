@@ -1,0 +1,26 @@
+<h2 style="font-size: medium;color: aliceblue; text-align: center">List (StockExchange) </h2>
+    <br>
+    <br>
+<div class="table-responsive">
+    <table class="table">
+        <tr>
+            <th>Id</th>
+            <th>StockExchange</th>
+            <th>Brief</th>
+            <th>Contact address</th>
+            <th>Remarks</th>
+            <th>Actions</th>
+        </tr>
+        <tr *ngFor="let stockExchange of stockexchanges">
+            <td>{{stockExchange.id}}</td>
+            <td>{{stockExchange.stockexchange}}</td>
+            <td>{{stockExchange.brief}}</td>
+            <td>{{stockExchange.contactaddress}}</td>
+            <td>{{stockExchange.remarks}}</td>
+            <td><button class="btn btn-danger" (click)="deleteStockExchange(stockExchange)"><i class='fas fa-trash' style='font-size:20px'></i></button>&nbsp;
+            <button class="btn btn-success" (click)="updateStockExchange(stockExchange)"><i class='fas fa-edit' style='font-size:20px'></i></button></td>
+        </tr>
+    </table>
+    </div>
+    
+    

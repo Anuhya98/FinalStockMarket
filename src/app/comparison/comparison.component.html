@@ -1,0 +1,40 @@
+<div class="container" style="margin-bottom:0">
+    <form [formGroup]="comparisonForm" novalidate class="form" (ngSubmit)="submit()">
+        <div class="form-group">
+            <div class="custom-control">
+                <p style="color: white;font-weight: bold" >Select the sector</p>
+                <select name="selectsector" class="form-control" formControlName="selectsector" required>
+                   <!-- <option selected>Sector</option> -->
+                   <option value="it">IT</option>
+                   <option value="consulting">Consulting</option>
+                   <option value="others">Others</option>
+                 </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="custom-control">
+                <p style="color: white;font-weight: bold" >Select the StockExchange</p>
+                <select name="selectsector" class="form-control" formControlName="selectstockexchange" required>
+                   <!-- <option selected>Sector</option> -->
+                   <option value="nse">NSE</option>
+                   <option value="bse">BSE</option>
+                   <option value="others">Others</option>
+                 </select>
+            </div>
+        </div>
+        <div class="form-group" style="color: white;">
+            <label for="name">Name of the company</label>
+            <input type="text" formControlName="companyname" placeholder="enter company name" name="companyname" class="form-control" id="companyname" required>
+        </div>
+        <div class="form-group" style="color: white;">
+            <label for="name">From Period</label>
+            <input type="date" formControlName="fromperiod" placeholder="enter from date" name="fromperiod" class="form-control" id="fromperiod" required>
+        </div>
+        <div class="form-group" style="color: white;">
+            <label for="name">To Period</label>
+            <input type="date" formControlName="toperiod" placeholder="enter to date" name="toperiod" class="form-control" id="toperiod" required>
+        </div>
+        <!-- <a class="btn btn-primary" href="/managecompany" role="button">Add Company</a>&nbsp; -->
+        <button type="submit" class="btn btn-success" [disabled]="!comparisonForm.valid">Submit</button>
+    </form>
+</div>

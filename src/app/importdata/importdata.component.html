@@ -1,0 +1,20 @@
+<div class="container" style="margin-bottom:0">
+   
+      <p class="h4 card-header" style="color: white;">Import Excel File</p>
+      <form class="row justify-content-center" [formGroup]="uploadExcelForm" navalidateclass="form">
+      
+    
+          <p class="card-text shadow" style="color: white;">Select File to be uploaded:&nbsp;</p>
+          <div class="input-group mb-3">
+              <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="excelFileUpload" formControlName="excelFileUpload" (change)="onFileChange($event)">
+                  <label class="custom-file-label" for="inputGroupFile" style="color:white">Choose file</label>
+              </div>
+              <div class="input-group-append mt-4">
+                  <!-- <span class="input-group-text btn-success btn-lg" id="inputGroupFileAddon" type="button">Upload -->
+                  <button type="submit" class="btn btn-primary btn-lg" [disabled]="!uploadExcelForm.valid" (click)="uploadData()">Submit</button>
+              </div>
+          </div>
+          </form>
+</div>
+          

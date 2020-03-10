@@ -1,0 +1,29 @@
+{
+  "managecompanies": [
+    {
+      "id": 123,
+      "companyname": "Patanjali",
+      "turnover": 10000,
+      "companyceoname": "Ramdev",
+      "selectstockexchange": "nse",
+      "selectsector": "Ayurvedic"
+    },
+    {
+      "id": 124,
+      "companyname": "TCS",
+      "turnover": 50000,
+      "companyceoname": "Chandrashekar",
+      "selectstockexchange": "bse",
+      "selectsector": "IT"
+    },
+    {
+      "id": 125,
+      "companyname": "Reliance Industries",
+      "turnover": 80000,
+      "companyceoname": "Mukesh Ambani",
+      "selectstockexchange": "bse",
+      "selectsector": "it",
+      "aboutcompany": "good"
+    }
+  ]
+}

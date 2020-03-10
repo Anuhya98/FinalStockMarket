@@ -1,0 +1,26 @@
+{
+    "stockexchanges":[
+        {
+            "id":165,
+            "stockexchange":"nse",
+            "brief":"Good",
+            "contactaddress":"Hyderabad",
+            "remarks":"Perfect"
+        },
+        {
+            "id":166,
+            "stockexchange":"bse",
+            "brief":"Better",
+            "contactaddress":"Chennai",
+            "remarks":"Ok"
+        },
+        {
+            "id":167,
+            "stockexchange":"nse",
+            "brief":"Best",
+            "contactaddress":"Pune",
+            "remarks":"Profits"
+        }
+
+    ]
+}
