@@ -26,6 +26,7 @@ import { UpdateStockexchangeComponent } from './update-stockexchange/update-stoc
 import { ComparisonComponent } from './comparison/comparison.component';
 import { ChartsComponent } from './charts/charts.component';
 import { LogoutComponent } from './logout/logout.component';
+import { AdminUserComponent } from './admin-user/admin-user.component';
 
 
 
@@ -57,7 +58,8 @@ const routes: Routes = [
   {path:"update-stockexchange",component:UpdateStockexchangeComponent},
   {path:"comparison",component:ComparisonComponent},
   {path:"displaycharts",component:ChartsComponent},
-  {path:"logout",component:LogoutComponent}
+  {path:"logout",component:LogoutComponent},
+  {path:"adminuser",component:AdminUserComponent}
 ];
 
 @NgModule({

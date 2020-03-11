@@ -33,6 +33,10 @@ import { ComparisonComponent } from './comparison/comparison.component';
 import { HighchartsChartComponent } from "../../node_modules/highcharts-angular";
 import { ChartsComponent } from './charts/charts.component';
 import { LogoutComponent } from './logout/logout.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpInterceptorService } from './http-interceptor.service';
+import { AdminUserComponent } from './admin-user/admin-user.component';
+import { UserprofileComponent } from './userprofile/userprofile.component';
 
 
 
@@ -65,7 +69,9 @@ import { LogoutComponent } from './logout/logout.component';
     ComparisonComponent,
     HighchartsChartComponent,
     ChartsComponent,
-    LogoutComponent
+    LogoutComponent,
+    AdminUserComponent,
+    UserprofileComponent
     //AddcompanyComponent,
    
   ],
@@ -75,7 +81,13 @@ import { LogoutComponent } from './logout/logout.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:HttpInterceptorService,
+      multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

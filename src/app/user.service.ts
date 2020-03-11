@@ -9,7 +9,7 @@ import { UsersComponent } from './users/users.component';
   providedIn: 'root'
 })
 export class UserService {
-  httpUrl = 'http://localhost:8001/users/';
+  httpUrl = 'http://localhost:8765/user-service/users/';
   constructor(private httpClient: HttpClient,@Inject(HttpClient)  private ht) { }
   getALLUsers(): Observable<User[]> {
     return this.httpClient.get<User[]>(this.httpUrl);
@@ -18,7 +18,7 @@ export class UserService {
     return this.httpClient.post<User>(this.httpUrl,user);
   }
   reg(){
-   return this.ht.get('http://localhost:8001/users');
+   return this.ht.get('http://localhost:8765/user-service/users');
   
   }
   deleteUser(id : number):Observable<User>{
@@ -35,7 +35,7 @@ export class UserService {
    return this.ht.get(this.httpUrl+id);
   }
   serActivation(obj){
-    return this.ht.put("http://localhost:8001/users/activate",obj)
+    return this.ht.put("http://localhost:8765/user-service/users/activate",obj)
   }
   LoggedIn(){
     let user_id=localStorage.getItem('userId');
@@ -43,6 +43,16 @@ export class UserService {
     return false;
     else return true;
   }
+  isAdmin(){
+    if (sessionStorage.getItem("userType")=="admin")
+    {
+      return true;
+    }
+    else
+     {
+       return false;
+     }
+    }
   isActivated(user:User){
     if(user.active=="yes"){
       return true;

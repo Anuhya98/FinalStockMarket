@@ -12,6 +12,8 @@ export class RegisterComponent implements OnInit {
 
 registerForm: FormGroup;
 users:User[];
+checkpasswords:boolean=true;
+repeatedname:boolean=false;
 
   constructor(private userService:UserService,private formBuilder:FormBuilder,private s:Router) { 
     this.userService.getALLUsers().subscribe(u=>{this.users=u;})
@@ -38,6 +40,25 @@ users:User[];
       }
       return true;
   }
+  checkPasswordMatch() {
+    if (
+        this.registerForm.get("password").value ==
+        this.registerForm.get("confirmpassword").value
+    ) {
+        this.checkpasswords = true;
+    } else {
+        this.checkpasswords = false;
+    }
+}
+checkUsernameExistOrNot() {
+  this.repeatedname = false;
+  for (let user of this.users) {
+      if (user.username == this.registerForm.get("username").value) {
+          this.repeatedname = true;
+          break;
+      }
+  }
+}
   addUser()
   {
     let e=this.registerForm.controls.email.value;

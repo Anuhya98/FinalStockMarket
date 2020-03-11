@@ -3,3 +3,15 @@
     border-top: 1px solid #ddd;
     color: white;
 }
+.card{
+    
+    background-color: transparent;
+}
+.card-img-top{
+    height: 80%;
+    object-fit: cover;
+}
+.img{
+    height:100%;
+  object-fit: cover;
+}

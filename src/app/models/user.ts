@@ -8,4 +8,5 @@ export class User
     confirmpassword:string;
     regStatus:string;
     active:string;
+    role:string;
 }

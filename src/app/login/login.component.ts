@@ -30,8 +30,19 @@ currentUser:User;
   login(){
     let username=this.loginForm.get("username").value;
     let password=this.loginForm.get("password").value;
-    const result=this.auth.authenticate(username,password);
-    console.log(result);
+    const result$=this.auth.authenticate(username,password);
+    result$.subscribe(data=>{
+      console.log(data);
+      if(sessionStorage.getItem("userType")=="admin")
+      {
+        this.router.navigate(['/adminlanding'])
+      }
+      else
+      if(sessionStorage.getItem("userType")=="user") {
+      this.router.navigate(['/userlanding']);
+      }
+      //this.router.navigate(['/adminuser'])
+    })
   }
   // isValid()
   // {
