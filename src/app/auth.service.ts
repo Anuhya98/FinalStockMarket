@@ -27,6 +27,7 @@ export class AuthService {
          console.log(data);
          sessionStorage.setItem("username",username);
          sessionStorage.setItem("password",authenticationToken);
+         sessionStorage.setItem("userId",data.id.toString());
          sessionStorage.setItem("userType",data.role==="ROLE_ADMIN"?"admin":"user");
          return data;
        }),
@@ -61,6 +62,14 @@ export class AuthService {
     if (user == null)
       return false;
     return true;
+  }
+  getProfileUrl(): string {
+    let url = sessionStorage.getItem("profile");
+    return url;
+  }
+  getUserDetails(): string {
+    let user = sessionStorage.getItem('username');
+    return user;
   }
   
   logout() {

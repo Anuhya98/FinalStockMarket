@@ -27,6 +27,9 @@ import { ComparisonComponent } from './comparison/comparison.component';
 import { ChartsComponent } from './charts/charts.component';
 import { LogoutComponent } from './logout/logout.component';
 import { AdminUserComponent } from './admin-user/admin-user.component';
+import { UserprofileComponent } from './userprofile/userprofile.component';
+import { UpdateuserprofileComponent } from './updateuserprofile/updateuserprofile.component';
+import { ChangeuserpasswordComponent } from './changeuserpassword/changeuserpassword.component';
 
 
 
@@ -59,7 +62,10 @@ const routes: Routes = [
   {path:"comparison",component:ComparisonComponent},
   {path:"displaycharts",component:ChartsComponent},
   {path:"logout",component:LogoutComponent},
-  {path:"adminuser",component:AdminUserComponent}
+  {path:"adminuser",component:AdminUserComponent},
+  {path:"viewmyprofile",component:UserprofileComponent},
+  {path:"updateuserprofile",component:UpdateuserprofileComponent},
+  {path:"changepassword",component:ChangeuserpasswordComponent}
 ];
 
 @NgModule({

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup,FormControl, Validators} from '@angular/forms';
 import { UploadServiceService } from '../upload-service.service';
+import bsCustomFileInput from "bs-custom-file-input";
 
 @Component({
   selector: 'app-importdata',
@@ -15,7 +16,7 @@ file:File;
    }
 
   ngOnInit() {
-    //bsCustomFileInput.init();
+    bsCustomFileInput.init();
     this.uploadExcelForm=new FormGroup({
       excelFileUpload:new FormControl("",[Validators.required])
     })

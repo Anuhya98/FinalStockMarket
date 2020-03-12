@@ -37,6 +37,8 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpInterceptorService } from './http-interceptor.service';
 import { AdminUserComponent } from './admin-user/admin-user.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
+import { UpdateuserprofileComponent } from './updateuserprofile/updateuserprofile.component';
+import { ChangeuserpasswordComponent } from './changeuserpassword/changeuserpassword.component';
 
 
 
@@ -71,7 +73,9 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
     ChartsComponent,
     LogoutComponent,
     AdminUserComponent,
-    UserprofileComponent
+    UserprofileComponent,
+    UpdateuserprofileComponent,
+    ChangeuserpasswordComponent
     //AddcompanyComponent,
    
   ],

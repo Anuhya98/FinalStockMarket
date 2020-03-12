@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup,FormControl, FormBuilder, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
+import { ManageCompaniesComponent } from '../manage-companies/manage-companies.component';
+import { CompanyService } from '../company.service';
+import { Company } from '../models/companies';
 
 @Component({
   selector: 'app-comparison',
@@ -9,19 +12,26 @@ import { Router } from '@angular/router';
 })
 export class ComparisonComponent implements OnInit {
 comparisonForm:FormGroup;
-submit()
+companies:Company[]
+onSubmit()
 {
-  console.log(this.comparisonForm.value);
+  this.router.navigate(['/displaycharts'])
+  queryParams:{
+    formData:JSON.stringify(this.comparisonForm.value)
+  }
 }
-  constructor(private formBuilder:FormBuilder,private router:Router) { }
+  constructor(private formBuilder:FormBuilder,private router:Router,private companyService:CompanyService) { }
 
   ngOnInit() {
     this.comparisonForm=this.formBuilder.group({
-      selectsector:['',Validators.required],
+      selectcompany1:[''],
+      selectcompany2:[''],
       selectstockexchange:['',Validators.required],
-      companyname:['',Validators.required],
       fromperiod:['',Validators.required],
       toperiod:['',Validators.required]
+    })
+    this.companyService.getALLCompanies().subscribe(data=>{
+      this.companies=data;
     })
   }
 

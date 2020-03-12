@@ -3,13 +3,15 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from './models/user';
 import { UsersComponent } from './users/users.component';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  httpUrl = 'http://localhost:8765/user-service/users/';
+  //httpUrl = 'http://localhost:8765/user-service/users/';
+  httpUrl=environment.host+"user-service/users/"
   constructor(private httpClient: HttpClient,@Inject(HttpClient)  private ht) { }
   getALLUsers(): Observable<User[]> {
     return this.httpClient.get<User[]>(this.httpUrl);
