@@ -15,17 +15,18 @@ comparisonForm:FormGroup;
 companies:Company[]
 onSubmit()
 {
-  this.router.navigate(['/displaycharts'])
-  queryParams:{
+  this.router.navigate(['/displaycharts'],
+  { queryParams:{
     formData:JSON.stringify(this.comparisonForm.value)
-  }
+  }})
 }
   constructor(private formBuilder:FormBuilder,private router:Router,private companyService:CompanyService) { }
 
   ngOnInit() {
     this.comparisonForm=this.formBuilder.group({
-      selectcompany1:[''],
-      selectcompany2:[''],
+      csselect: ['',Validators.required],
+      cnsn: ['',Validators.required],
+      ctcnsn: ['',Validators.required],
       selectstockexchange:['',Validators.required],
       fromperiod:['',Validators.required],
       toperiod:['',Validators.required]

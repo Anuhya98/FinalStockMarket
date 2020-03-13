@@ -16,6 +16,7 @@ updatecompanyForm:FormGroup;
   ngOnInit() {
     this.updatecompanyForm=this.formBuilder.group({
       id:['',Validators.required],
+      companyCode:['',Validators.required],
       companyname:['',Validators.required],
       turnover:['',Validators.required],
       companyceoname:['',Validators.required],

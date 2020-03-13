@@ -19,6 +19,7 @@ export class ManageCompaniesComponent implements OnInit {
   ngOnInit() {
     this.managecompanyForm=this.formBuilder.group({
       id:['',Validators.required],
+      companyCode:['',Validators.required],
       companyname:['',Validators.required],
       turnover:['',Validators.required],
       companyceoname:['',Validators.required],

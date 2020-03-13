@@ -2,6 +2,7 @@
 <table class="table">
     <tr>
         <th>Company Id</th>
+        <th>Company Code</th>
         <th>CompanyName</th>
         <th>Turnover</th>
         <th>CEO name</th>
@@ -13,6 +14,7 @@
     </tr>
     <tr *ngFor="let company of managecompanies">
         <td>{{company.id}}</td>
+        <td>{{company.companyCode}}</td>
         <td>{{company.companyname}}</td>
         <td>{{company.turnover}}
         <td>{{company.companyceoname}}</td>

@@ -1,62 +1,42 @@
 <div class="container" style="margin-bottom:0">
-    <form [formGroup]="comparisonForm" novalidate class="form">
-        <div class="form-group">
-            <!-- <div class="custom-control">
-                <p style="color: white;font-weight: bold" >Select the sector</p>
-                <select name="selectsector" class="form-control" formControlName="selectsector" required>
-                   <option value="it">IT</option>
-                   <option value="consulting">Consulting</option>
-                   <option value="others">Others</option>
-                 </select>
-            </div>  -->
-        </div>
+    <form [formGroup]="comparisonForm" novalidate class="form" (ngSubmit)="onSubmit()">
         <!-- <div class="form-group">
-            <div class="custom-control">
-                <p style="color: white;font-weight: bold" >Select the StockExchange</p>
-                <select name="selectsector" class="form-control" formControlName="selectstockexchange" required>
-                   <option value="nse">NSE</option>
-                   <option value="bse">BSE</option>
-                   <option value="others">Others</option>
-                 </select>
-            </div>
+            
         </div> -->
-        <!-- <div class="form-group" style="color: white;">
-            <label for="name">Name of the first company</label>
-            <input type="text" formControlName="firstcompanyname" placeholder="enter first company name" name="firstcompanyname" class="form-control" id="firstcompanyname" required>
-        </div>
-        <div class="form-group" style="color: white;">
-            <label for="name">Name of the second company</label>
-            <input type="text" formControlName="secondcompanyname" placeholder="enter second company name" name="secondcompanyname" class="form-control" id="secondcompanyname" required>
-        </div> -->
-        
         <div class="form-group">
-            <div class="custom-control">
-                <p style="color: white;font-weight: bold" >Select the first company</p>
-                <select name="selectcompany1" class="form-control" formControlName="selectcompany1" required>
-                    <option *ngFor="let company of companies" value={{company.id}}>{{company.companyname}}</option>
+                <label for="select company or sector" style="color: white;font-weight: bold" >Select the Company/Sector</label>
+                <select name="csselect" class="form-control" formControlName="csselect" required>
+                   <option>Company</option>
+                   <option>Sector</option>
                  </select>
-            </div>
-        </div> 
-        <div class="form-group">
-            <div class="custom-control">
-                <p style="color: white;font-weight: bold" >Select the second company</p>
-                <select name="selectcompany2" class="form-control" formControlName="selectcompany2" required>
-                    <option *ngFor="let company of companies" value={{company.id}}>{{company.companyname}}</option>
-                 </select>
-            </div>
         </div>
         <div class="form-group">
-            <div class="custom-control">
-                <p style="color: white;font-weight: bold" >Select the StockExchange</p>
-                <select name="selectsector" class="form-control" formControlName="selectstockexchange" required>
-                   <option value="nse">NSE</option>
-                   <option value="bse">BSE</option>
-                   <option value="others">Others</option>
-                 </select>
-            </div>
+            <label for="company name/sector name" style="color: white;font-weight: bold">Company Name/Sector Name</label>
+            <select  class="form-control" id="cnsn" formControlName="cnsn" placeholder="Enter company(or) sector name"
+              name="cnsn" >
+              <option value=""selected disabled >Select Company</option>
+              <option *ngFor="let company of companies"
+              [value]="">
+            {{company.companyCode}}</option>
+            </select>
+          </div>
+        <div class="form-group">
+            <label for="company name/sector name" style="color: white;font-weight: bold">Company Name/Sector Name Compare To</label>
+            <select class="form-control" id="ctcnsn" formControlName="ctcnsn" placeholder="Enter company(or) sector name Compare To"
+              name="ctcnsn" >
+              <option value="" selected disabled >Select Company</option>
+            <option *ngFor="let company of companies"
+            [value]="">
+          {{company.companyCode}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="Select stock exchange" style="color: white;font-weight: bold">Select Stock Exchange</label>
+            <select class="form-control" id="selectstockexchange" formControlName="selectstockexchange" name="selectstockexchange">
+              <option>NSE</option>
+              <option>BSE</option>
+            </select>
         </div>
-         
-
         <div class="form-group" style="color: white;">
             <label for="name">From Period</label>
             <input type="date" formControlName="fromperiod" placeholder="enter from date" name="fromperiod" class="form-control" id="fromperiod" required>
@@ -66,6 +46,6 @@
             <input type="date" formControlName="toperiod" placeholder="enter to date" name="toperiod" class="form-control" id="toperiod" required>
         </div>
         <!-- <a class="btn btn-primary" href="/managecompany" role="button">Add Company</a>&nbsp; -->
-        <button type="submit" class="btn btn-success" (click)="onSubmit()" [disabled]="!comparisonForm.valid">Submit</button>
+        <button type="submit" class="btn btn-success" [disabled]="!comparisonForm.valid">Generate</button>
     </form>
 </div>
