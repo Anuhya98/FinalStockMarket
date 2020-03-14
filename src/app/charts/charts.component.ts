@@ -20,18 +20,19 @@ ngOnInit(){
    this.compareData = JSON.parse(this.route.snapshot.queryParams.formData);
        let series: any = []
            let categories: any[] = [];
-           this.uploadService.getCompanyStockPricesBetween(this.compareData.cnsn, this.compareData.seselect, this.compareData.fromperiod, this.compareData.toperiod).subscribe(data => {
+           this.uploadService.getCompanyStockPricesBetween(this.compareData.cnsn, this.compareData.selectstockexchange, this.compareData.fromperiod, this.compareData.toperiod).subscribe(data => {
                let companyOneData: any[] = [];
-                console.log(companyOneData)
+                console.log(data)
                data.forEach((stockPrice) => {
                    categories.push(stockPrice.dataPoint);
                    companyOneData.push(stockPrice.dataValue)
                })
                let seriesDataMemberOne = {
-                   name: this.compareData.cnsn + " (" + this.compareData.seselect + ")",
+                   name: this.compareData.cnsn + " (" + this.compareData.selectstockexchange + ")",
                    data: companyOneData
                }
                series[0] = seriesDataMemberOne;
+               console.log(series);
                this.getFirstDataComplete = true;
            });
            this.uploadService.getCompanyStockPricesBetween(this.compareData.ctcnsn, this.compareData.selectstockexchange, this.compareData.fromperiod, this.compareData.toperiod).subscribe(data => {
@@ -42,7 +43,7 @@ ngOnInit(){
                 }
             })
             let seriesDataMemberTwo = {
-                name: this.compareData.ctcnsn + " (" + this.compareData.seselect + ")",
+                name: this.compareData.ctcnsn + " (" + this.compareData.selectstockexchange + ")",
                 data: companyTwoData
             }
             series[1] = seriesDataMemberTwo;

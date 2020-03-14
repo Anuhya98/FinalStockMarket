@@ -16,7 +16,7 @@ file:File;
    }
 
   ngOnInit() {
-    bsCustomFileInput.init();
+    bsCustomFileInput.init()
     this.uploadExcelForm=new FormGroup({
       excelFileUpload:new FormControl("",[Validators.required])
     })
